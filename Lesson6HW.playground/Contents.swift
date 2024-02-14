@@ -66,7 +66,25 @@ let arrayNumbers: [Int] = [1,2,3,4,5]
 //
 //print(squareNumberInArray(arrayNumbers: array1) ?? [0])
 
+//ver5
 
+//func squareNumberInArray(arrayNumbers arr: [Int]) -> [Int] {
+//    var result: [Int] = []
+//    if !arr.isEmpty {
+//        arr.map({ result.append($0 * $0)})
+//    }
+//    return result
+//}
+//
+//print(squareNumberInArray(arrayNumbers: array1))
+
+//ver6
+
+//func squareNumberInArray(arrayNumbers arr: [Int]) -> [Int] {
+//    arr.isEmpty ? [] : arr.map({ $0 * $0 })
+//}
+//
+//print(squareNumberInArray(arrayNumbers: array1))
 
 //nil
 
@@ -141,6 +159,42 @@ let arrayNil: [Int]? = nil
 //}
 //
 //print(evenNumbersToArrayVer2(arr: array1))
+
+//ver3
+
+//let arrayIsEmpty: [Int] = []
+//
+//func evenNumbersToArrayVer3(arr: [Int]) -> [Int] {
+//    var result: [Int] = []
+//    if !arr.isEmpty {
+//        arr.forEach({
+//            if $0 % 2 == 0 { result.append($0) }
+//        })
+//    }
+//    return result
+//}
+//
+//print(evenNumbersToArrayVer3(arr: array1))
+
+//ver4
+
+//func evenNumbersToArrayVer4(arr: [Int]) -> [Int] {
+//    if !arr.isEmpty {
+//        let result: [Int] = arr.filter({ $0 % 2 == 0 })
+//        return result
+//    }
+//    return []
+//}
+//
+//print(evenNumbersToArrayVer4(arr: array1))
+
+//ver5
+
+func evenNumbersToArrayVer5(arr: [Int]) -> [Int] {
+    arr.isEmpty ? [] : arr.filter({ $0 % 2 == 0 })
+}
+
+print(evenNumbersToArrayVer5(arr: array1))
 
 
 // map
